@@ -20,7 +20,7 @@ function calculate() {
   if (isNaN(price)  || price  <= 0)     return showError("⚠️ من فضلك أدخل سعر الجهاز");
   if (isNaN(months) || months < 1 || months > 36) return showError("⚠️ عدد الأشهر يجب أن يكون بين 1 و 36");
   if (isNaN(rate)   || rate < 0)        return showError("⚠️ من فضلك أدخل نسبة الفائدة");
-  const down = price * 0.25;
+  const down = price * 0.35;
   const rem  = price - down;
   const mr   = (rate / 100 / 12) * months;
   const mo   = (rem * (1 + mr)) / months;
