@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margona — حاسبة التقسيط</title>
+<link rel="stylesheet" href="margouna.css">
+</head>
+<div class="bg">
+  <div class="bg-pattern"></div>
+  <div class="bg-orb bo1"></div>
+  <div class="bg-orb bo2"></div>
+  <div class="bg-orb bo3"></div>
+</div>
+
+<div class="page">
+
+  <div class="header">
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Margona Logo">
+    </div>
+    <div class="tagline">Installment Calculator · حاسبة التقسيط</div>
+  </div>
+
+  <div class="contact-strip">
+    <span>للتواصل</span>
+    <div class="wa-dot"></div>
+    <a href="https://wa.me/201000000000" target="_blank">01001931952</a>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🧮</span>
+      <span class="card-title">احسب قسطك الآن</span>
+    </div>
+
+    <div class="field">
+      <label>سعر الجهاز</label>
+      <div class="input-wrap">
+        <span class="input-icon">🏷️</span>
+        <input type="number" id="price" placeholder="أدخل السعر بالجنيه" min="0">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>عدد الأشهر (1 – 36)</label>
+      <div class="input-wrap">
+        <span class="input-icon">📅</span>
+        <input type="number" id="months" placeholder="مثال: 12" min="1" max="36">
+      </div>
+    </div>
+
+    <div class="section-divider">إعدادات الفائدة</div>
+
+    <div class="field rate-field">
+      <label>نسبة الفائدة السنوية (%)</label>
+      <div class="input-wrap">
+        <span class="input-icon">📊</span>
+        <input type="number" id="rate" placeholder="مثال: 35" min="0" max="200" step="0.5">
+      </div>
+    </div>
+
+    <button class="btn" onclick="calculate()">احسب القسط الشهري ❄️</button>
+
+    <div class="error-msg" id="error"></div>
+
+    <div class="result-box" id="result">
+      <div class="result-divider">النتيجة</div>
+      <div class="result-row">
+        <span class="result-label">💰 المقدم (25%)</span>
+        <span class="result-value" id="r-down">—<span class="cur"> ج</span></span>
+      </div>
+      <div class="result-row highlight">
+        <span class="result-label">💳 القسط الشهري</span>
+        <span class="result-value" id="r-monthly">—<span class="cur"> ج</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">© 2025 Margona — خبراء التكييف</div>
+
+</div>
+<script src="margouna.js"></script>
+</body>
+</html>
